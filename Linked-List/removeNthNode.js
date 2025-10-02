@@ -1,5 +1,6 @@
 // example : [1,2,3,4,5,6] n = 2
 // output: [[1,2,3,4,6] // last index jo n ki value hai wo remove hoga
+// ye two pass solution hai isme do baar linked list me traverse ho rha hai.
 
 function Node(value) {
   this.value = value;

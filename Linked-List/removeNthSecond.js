@@ -30,22 +30,25 @@ LinkedList.prototype.add = function (value) {
   current.next = newNode;
 };
 
-// remove nth elemnts
+// remove nth elemnts via two pointer approach
 
 function removeNthElements(head, n) {
   let sentinal = new Node(0);
+  let slow = sentinal;
+  let fast = sentinal;
   sentinal.next = head;
-  let length = 0;
-  while (head) {
-    head = head.next;
-    length++;
+
+  while (fast && fast.next) {
+    if (n > 0) {
+      fast = fast.next;
+      n--;
+    } else {
+      fast = fast.next;
+      slow = slow.next;
+    }
   }
-  let prevPos = length - n;
-  let prev = sentinal;
-  for (let i = 0; i < prevPos; i++) {
-    prev = prev.next;
-  }
-  prev.next = prev.next.next; // remove elements ke liye ye yaad rakhna hai
+
+  slow.next = slow.next.next;
   return sentinal.next;
 }
 

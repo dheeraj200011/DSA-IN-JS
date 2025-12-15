@@ -33,7 +33,6 @@
 
 // queues.shift();
 
-// // peek/first : ye array ka mid element show karega
 
 // const mid = queues[0];
 

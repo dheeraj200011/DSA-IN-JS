@@ -1,4 +1,4 @@
-//
+// search in Rotated Sorted Array
 
 const nums = [4, 5, 6, 7, 0, 1, 2];
 let target = 0;

@@ -15,7 +15,7 @@ const findPeak = (nums) => {
       r = m;
     }
   }
-  return nums[r]; // yha l or r dono equal honge
+  return l; // yha l or r dono equal honge
 };
 
 console.log(findPeak(nums)); // 5 or 6 (any valid peak)

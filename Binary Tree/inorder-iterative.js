@@ -1,5 +1,4 @@
-// Preorder Traversal - Iterative Approach
-// root => left => right
+// In order Trasversal - Iterative approach // left => root => right
 
 class TreeNode {
   constructor(val) {
@@ -17,19 +16,25 @@ root.right.right = new TreeNode(5);
 root.left.left = new TreeNode(6);
 root.left.right = new TreeNode(7);
 
-const preOrderIterartive = (root) => {
+const InorderIterative = (root) => {
   if (!root) return;
-  let stack = [root];
+
+  let stack = [];
   let ans = [];
+  let curr = root;
 
-  while (stack.length > 0) {
-    let curr = stack.pop();
+  while (curr != null || stack.length > 0) {
+    while (curr != null) {
+      stack.push(curr);
+      curr = curr.left;
+    }
+
+    curr = stack.pop();
     ans.push(curr.val);
-    if (curr.right) stack.push(curr.right); // isme hum right ko rakh rhe hai phle taki left wala hi stack se out hoga or ans me push hoga
-    if (curr.right) stack.push(curr.left);
-  }
 
+    curr = curr.right;
+  }
   return ans;
 };
 
-console.log(preOrderIterartive(root));
+console.log(InorderIterative(root));

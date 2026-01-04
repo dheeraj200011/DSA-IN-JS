@@ -1,4 +1,4 @@
-// Last common ancestor // very important
+// lowest common ancestor // very important
 
 // isme bottom se traverse hoga
 // curr ki value p or q hui to +1 hoga jab count = 2  hoga jo cuur value lca hogi

@@ -1,6 +1,8 @@
 // Subsets
 // substes me 2ki pwer n hota hai
 // ex: [1,2,3] n = 3 : 2 ki pow 3 : 8 to inten hi subsets honge
+// start ale me right side traverse karte hai
+// time compelxity: O(N*2powN)
 
 const nums = [1, 2, 3];
 

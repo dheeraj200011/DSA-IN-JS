@@ -1,5 +1,7 @@
 // Bellman Ford Algorithm - Shortest Path with Negative Weights
 // bellman negative weights ko acche se handle karta hai
+// lekin dikstra better hai iss question ke liye
+// lekin negative ke liye bellman hi best hai
 
 // formula
 // if (dist[u] + weight < dist[v])
@@ -38,7 +40,8 @@ const bellmanFord = (vertices, edges, src) => {
   // Ye sirf check karne ke liye hai 👀
   for (let [u, v, w] of edges) {
     if (dist[u] != Infinity && dist[u] + w < dist[v]) {
-      dist[v] = dist[u] + w;
+      console.log("Negative cycle detected");
+      return;
     }
   }
   return dist;
